@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2026-11-25",
+    "title": "AI 硬件重挫后惊险深 V 反转，宽度大幅跑赢权重",
+    "url": "reports/2026-11-25.html",
+    "market": {
+      "QQQ": {
+        "date": "2026-11-25",
+        "close": 633.93,
+        "pct": -0.653,
+        "previousRawClose": 638.1,
+        "low": 607.74,
+        "high": 634.89,
+        "volume": 81996734
+      },
+      "SPY": {
+        "date": "2026-11-25",
+        "close": 716.7,
+        "pct": -0.289,
+        "previousRawClose": 718.78,
+        "low": 695.49,
+        "high": 718.42,
+        "volume": 13269826
+      },
+      "^VIX": {
+        "date": "2026-11-25",
+        "close": 28.29,
+        "pct": 7.322,
+        "previousRawClose": 26.36,
+        "low": 27.49,
+        "high": 34.95,
+        "volume": 0
+      }
+    }
+  }
+]
