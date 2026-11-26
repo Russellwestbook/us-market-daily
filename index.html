@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美股收盘日报｜每日复盘归档</title>
+<style>
+  :root {
+    --bar-bg: #0F172A;
+    --bar-ink: #F8FAFC;
+    --bar-mute: #94A3B8;
+    --accent: #14B8A6;
+    --border: #1E293B;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+    background: #FFFFFF;
+  }
+  .topbar {
+    height: 54px;
+    background: var(--bar-bg);
+    color: var(--bar-ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+    gap: 14px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  select, button, a.btn {
+    background: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  select:hover, button:hover, a.btn:hover {
+    border-color: var(--accent);
+  }
+  button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .frame-wrap {
+    height: calc(100% - 54px);
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  @media (max-width: 640px) {
+    .brand span.sub { display: none; }
+    .topbar { padding: 0 12px; }
+  }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>美股收盘日报</span>
+      <span class="sub" style="color:var(--bar-mute);font-weight:400;font-size:13px;">US Market Daily</span>
+    </div>
+    <div class="controls">
+      <button id="prevBtn" title="上一个交易日">上一期</button>
+      <select id="dateSelect" aria-label="选择日报日期"></select>
+      <button id="nextBtn" title="下一个交易日">下一期</button>
+      <a id="rawLink" class="btn" target="_blank" rel="noopener noreferrer">新窗口打开</a>
+    </div>
+  </header>
+  <div class="frame-wrap">
+    <iframe id="reportFrame" title="美股收盘日报正文"></iframe>
+  </div>
+
+  <script>
+    (async function () {
+      const sel = document.getElementById("dateSelect");
+      const frame = document.getElementById("reportFrame");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const rawLink = document.getElementById("rawLink");
+
+      const res = await fetch("reports/manifest.json?t=" + Date.now());
+      const manifest = await res.json();
+      const items = manifest.dates || [];
+
+      items.forEach((item) => {
+        const opt = document.createElement("option");
+        opt.value = item.date;
+        opt.textContent = item.date;
+        sel.appendChild(opt);
+      });
+
+      function loadDate(targetDate, pushHistory) {
+        let idx = items.findIndex((x) => x.date === targetDate);
+        if (idx === -1) idx = 0;
+        const current = items[idx];
+        if (!current) return;
+
+        sel.value = current.date;
+        frame.src = current.path;
+        rawLink.href = current.path;
+        document.title = "美股收盘日报｜" + current.date;
+
+        // items sorted newest first: idx+1 is older (prev), idx-1 is newer (next)
+        prevBtn.disabled = idx >= items.length - 1;
+        nextBtn.disabled = idx <= 0;
+
+        if (pushHistory) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("date", current.date);
+          window.history.replaceState({}, "", url.toString());
+        }
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const initDate = params.get("date") || manifest.latest;
+      loadDate(initDate, false);
+
+      sel.addEventListener("change", () => loadDate(sel.value, true));
+      prevBtn.addEventListener("click", () => {
+        const idx = items.findIndex((x) => x.date === sel.value);
+        if (idx < items.length - 1) loadDate(items[idx + 1].date, true);
+      });
+      nextBtn.addEventListener("click", () => {
+        const idx = items.findIndex((x) => x.date === sel.value);
+        if (idx > 0) loadDate(items[idx - 1].date, true);
+      });
+    })();
+  </script>
+</body>
+</html>
