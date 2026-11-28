@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-11-27",
+    "title": "黑五半日市科技半导体领衔大涨，标普创去年4月以来最佳单周",
+    "url": "reports/2026-11-27.html",
+    "market": {
+      "QQQ": {
+        "date": "2026-11-27",
+        "close": 650.73,
+        "pct": 2.65,
+        "previousRawClose": 633.93,
+        "low": 636.72,
+        "high": 651.34,
+        "volume": 35503690
+      },
+      "SPY": {
+        "date": "2026-11-27",
+        "close": 728.32,
+        "pct": 1.621,
+        "previousRawClose": 716.7,
+        "low": 719.61,
+        "high": 729.15,
+        "volume": 9678154
+      },
+      "^VIX": {
+        "date": "2026-11-27",
+        "close": 23.81,
+        "pct": -11.157,
+        "previousRawClose": 26.8,
+        "low": 23.81,
+        "high": 27.52,
+        "volume": 0
+      }
+    }
+  },
+  {
     "date": "2026-11-25",
     "title": "AI 硬件重挫后惊险深 V 反转，宽度大幅跑赢权重",
     "url": "reports/2026-11-25.html",
