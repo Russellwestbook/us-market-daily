@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>美股收盘日报｜2026-11-27</title>
+<style>
+:root{
+  --paper:#fff4dd; --card:#fffdf7; --ink:#29231d; --muted:#716657;
+  --line:#e0d4bc; --accent:#c34420; --orange:#f1663e; --sun:#ffda64;
+  --mint:#d6edc5; --sky:#d4e9f9; --rose:#f5d4cf;
+  --positive:#22613b; --negative:#a52e2a;
+  --mono:"Cascadia Code","Consolas",ui-monospace,monospace;
+  --display:"Arial Rounded MT Bold","Trebuchet MS","Microsoft YaHei",system-ui,sans-serif;
+  font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink); background:var(--paper); font-synthesis:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;line-height:1.75;-webkit-font-smoothing:antialiased;background:var(--paper);color:var(--ink)}
+main{max-width:1060px;margin:0 auto;padding:30px 34px 64px}
+a{color:var(--accent);text-underline-offset:4px;text-decoration-color:#e7a48c;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+::selection{background:var(--sun);color:var(--ink)}
+.site-brand{display:inline-flex;align-items:baseline;gap:9px;color:var(--ink);font:900 28px/1.2 var(--display);letter-spacing:-.05em;text-decoration:none;margin-bottom:24px}
+.site-brand span{color:var(--accent)}
+header{position:relative;border-top:2px solid var(--ink);padding:34px 215px 30px 0;min-height:240px}
+.eyebrow{font:700 12px/1.6 var(--mono);letter-spacing:.06em;color:var(--muted)}
+h1{font:900 clamp(30px,4.2vw,48px)/1.25 var(--display);letter-spacing:-.04em;margin:14px 0 16px}
+h1 span{color:var(--accent)}
+.deck{font-size:17px;line-height:1.75;color:#5e5144;margin:0 0 14px}
+.meta{font-size:12px;line-height:1.8;color:var(--muted)}
+.date-card{position:absolute;right:6px;top:38px;width:165px;background:var(--card);border:2px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink);text-align:center;transform:rotate(2deg);display:flex;flex-direction:column}
+.date-card:before,.date-card:after{content:"";position:absolute;top:-12px;width:10px;height:24px;border:2px solid var(--ink);border-radius:6px;background:var(--paper)}
+.date-card:before{left:23px}.date-card:after{right:23px}
+.date-card small{border-bottom:2px dashed var(--ink);border-radius:10px 10px 0 0;background:var(--sun);padding:16px 7px 9px;font:700 10px/1.4 var(--mono)}
+.date-card .calendar-year{font:600 12px var(--mono);letter-spacing:.12em;color:var(--muted);padding-top:12px}
+.date-card strong{font:900 46px/1.3 var(--display);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.date-card .calendar-caption{font-size:11px;color:var(--muted);padding:0 5px 14px}
+main > section{background:var(--card);border:2px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);padding:24px 28px;margin:22px 0}
+h2{font:800 22px/1.35 var(--display);margin:0 0 14px;padding-bottom:10px;border-bottom:2px dashed var(--line);color:var(--ink)}
+h3{font:700 16px/1.4 var(--display);margin:18px 0 8px;color:var(--ink)}
+p{margin:0 0 12px;color:#3d342b}
+ul,ol{margin:8px 0 14px;padding-left:22px;color:#3d342b}
+li{margin-bottom:7px}
+.callout{background:#fff8e8;border:2px solid var(--ink);border-left:6px solid var(--accent);border-radius:10px;padding:14px 18px;margin:12px 0 16px;font-weight:600;color:var(--ink)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:14px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0}
+.mini-card{background:var(--paper);border:1.5px solid var(--ink);border-radius:10px;padding:12px 14px}
+.mini-card .k{font:700 12px var(--mono);color:var(--muted)}
+.mini-card .v{font:800 22px var(--mono);margin:4px 0}
+.table-wrap{width:100%;overflow-x:auto;margin:12px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card)}
+th{background:var(--sun);color:var(--ink);font:700 12px/1.4 var(--mono);text-align:left;padding:9px 10px;border:1.5px solid var(--ink);white-space:nowrap}
+td{padding:9px 10px;border:1.5px solid var(--line);vertical-align:top;color:#3d342b}
+tr:nth-child(even) td{background:#fffaf0}
+.num{text-align:right;font-family:var(--mono);white-space:nowrap}
+.pos{color:var(--positive);font-weight:700}
+.neg{color:var(--negative);font-weight:700}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font:700 12px var(--mono);border:1.5px solid var(--ink);white-space:nowrap}
+.pill-up{background:var(--mint);color:var(--positive)}
+.pill-dn{background:var(--rose);color:var(--negative)}
+.pill-mid{background:var(--sky);color:var(--ink)}
+.pill-warn{background:var(--sun);color:var(--ink)}
+.chart{margin:16px 0;padding:14px;background:var(--paper);border:1.5px solid var(--ink);border-radius:12px;overflow-x:auto}
+.chart-title{font:700 15px/1.4 var(--display);margin:0 0 10px;color:var(--ink)}
+.chart-cap{font-size:12px;color:var(--muted);margin-top:8px}
+@media (max-width:780px){
+  main{padding:18px 16px 48px}
+  header{padding:24px 0 20px;min-height:auto}
+  .date-card{position:static;margin:16px 0 0;transform:none}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  main > section{padding:18px 16px}
+}
+</style>
+</head>
+<body>
+<main>
+  <a class="site-brand" href="../">QQQ<span>&amp;</span>SPY</a>
+  <header>
+    <p class="eyebrow">MARKET JOURNAL · 美股收盘日报 · 15 模块完整版</p>
+    <h1>黑五半日市全面大涨，<span>科技半导体反攻</span>领衔周线长阳</h1>
+    <p class="deck">2026 年 11 月 27 日（周五）为感恩节后“黑色星期五”提前休市日（美东 13:00 收盘）。在假日清淡流动性与美油回落缓解通胀焦虑的共振下，美股全线高开高走：标普 500 涨 +1.60% 创 2025 年 4 月以来最佳单周（+5.6%），费城半导体（SOX）大涨 +4.69%，恐慌指数 VIX 跌破 24 关口。</p>
+    <p class="meta">交易日：2026-11-27（美东半日市 13:00 收盘）｜发布时间：2026-11-28 北京时间｜数据来源：Google Finance、CappNotes、Portfolio Terminal、Trading Economics、Earnings Whispers 等</p>
+    <div class="date-card">
+      <small>THE CLOSING EDITION</small>
+      <span class="calendar-year">2026</span>
+      <strong>11.27</strong>
+      <span class="calendar-caption">美东 · 黑五半日市</span>
+    </div>
+  </header>
+
+  <section id="sec-0">
+    <h2>0. 今日一句话总结</h2>
+    <div class="callout">今日市场状态：风险偏好显著回暖、11 大板块全线收红，半导体与超跌成长股带队修复，VIX 回落至 23.81 确认短线恐慌退潮。</div>
+    <p>黑色星期五半日市（美东 13:00 提前收盘）延续周三午盘以来的修复动能并全面加速。随着 WTI 原油回落 -1.88% 至 $83.33 缓解部分输入性通胀忧虑，尽管 10 年期美债收益率上行 9 bps 至 4.94%，风险资产仍展现强劲承接力：<strong>标普 500</strong> 收涨 <strong>+1.60%</strong> 报 7,297.49 点（单周大涨 <strong>+5.6%</strong>，创 2025 年 4 月以来最佳周表现），<strong>纳斯达克综合指数</strong> 跳升 <strong>+2.31%</strong> 至 24,129.50 点，<strong>道指</strong> 涨 <strong>+1.18%</strong> 至 50,774.94 点（创 2022 年 10 月以来最大单周涨幅）（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>、<a href="https://portfolio-terminal.com/markets/stock-market-close" target="_blank" rel="noopener">Portfolio Terminal</a>）。</p>
+    <p>内部结构呈健康普涨格局：标普 500 涨跌家数达 <strong>406 : 94</strong>，11 大板块无一下跌，信息技术（XLK +2.80%）与费城半导体（SOX +4.69%）强势回归领涨，同时等权标普（RSP +1.22%）与罗素 2000（+1.71%）同步跟进。</p>
+  </section>
+
+  <section id="sec-1">
+    <h2>1. 大盘表现总览</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>指数 / ETF</th><th class="num">收盘点位</th><th class="num">涨跌幅</th><th class="num">日内低点 / 高点</th><th>技术与成交状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Dow Jones (.DJI)</strong></td><td class="num">50,774.94</td><td class="num pos">+1.18%</td><td class="num">50,398.29 / 50,830.19</td><td>站稳 50,700 点，单周创 2022 年 10 月以来最佳涨幅（成交 3.65 亿股）</td></tr>
+          <tr><td><strong>S&amp;P 500 (.INX)</strong></td><td class="num">7,297.49</td><td class="num pos">+1.60%</td><td class="num">7,211.46 / 7,304.10</td><td>单周 +5.6% 创去年 4 月以来最佳；SPY 收 $728.32（+1.62%），盘后 $731.30</td></tr>
+          <tr><td><strong>Nasdaq Composite</strong></td><td class="num">24,129.50</td><td class="num pos">+2.31%</td><td class="num">23,690.60 / 24,149.09</td><td>强势重返 24,000 点关口上方，单边高走收于日内高位附近</td></tr>
+          <tr><td><strong>Nasdaq 100 / QQQ</strong></td><td class="num">26,726.39 / $650.73</td><td class="num pos">+2.61% / +2.65%</td><td class="num">$636.72 / $651.34</td><td>QQQ 成交 3,550 万股（半日缩量），突破 $650 整数压制（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>）</td></tr>
+          <tr><td><strong>Russell 2000 / IWM</strong></td><td class="num">2,750.30 / $273.79</td><td class="num pos">+1.71% / +1.83%</td><td class="num">2,721.39 / 2,751.42</td><td>IWM 成交 351 万股，刷新周内反弹新高，中小盘扩散延续</td></tr>
+          <tr><td><strong>SOX 半导体 / SMH</strong></td><td class="num">SOX +4.69% / $440.06</td><td class="num pos">+4.69% / +4.15%</td><td class="num">$421.85 / $440.27</td><td>存储、光互连与 AI 芯片全线大爆发，SMH 盘后微幅回吐至 $437.30</td></tr>
+          <tr><td><strong>CBOE VIX</strong></td><td class="num">23.81</td><td class="num pos">-11.16%</td><td class="num">23.81 / 27.52</td><td>日内单边回落收于最低点，成功跌破 25 恐慌警戒线</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart">
+      <div class="chart-title">黑五半日市（09:30–13:00 ET）单边震荡走强：SMH 领涨 +4.15%，QQQ 突破 $650</div>
+      <svg viewBox="0 0 700 360" width="100%" role="img" aria-label="2026-11-27黑五半日市主要指数与ETF盘中走势">
+        <line x1="66" y1="30" x2="556" y2="30" stroke="#e0d4bc" stroke-width="1"/>
+        <line x1="66" y1="90" x2="556" y2="90" stroke="#e0d4bc" stroke-width="1"/>
+        <line x1="66" y1="150" x2="556" y2="150" stroke="#e0d4bc" stroke-width="1"/>
+        <line x1="66" y1="210" x2="556" y2="210" stroke="#e0d4bc" stroke-width="1"/>
+        <line x1="66" y1="270" x2="556" y2="270" stroke="#e0d4bc" stroke-width="1"/>
+        <line x1="66" y1="305" x2="556" y2="305" stroke="#716657" stroke-width="1.4" stroke-dasharray="4,3"/>
+        <text x="56" y="34" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+4.5%</text>
+        <text x="56" y="94" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+3.5%</text>
+        <text x="56" y="154" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+2.5%</text>
+        <text x="56" y="214" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+1.5%</text>
+        <text x="56" y="274" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+0.5%</text>
+        <text x="56" y="309" text-anchor="end" font-family="Consolas,monospace" font-size="12.5" font-weight="700" fill="#29231d">0.0%</text>
+        <text x="66" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">09:35</text>
+        <text x="164" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">10:15</text>
+        <text x="262" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">11:00</text>
+        <text x="360" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">11:45</text>
+        <text x="458" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">12:30</text>
+        <text x="556" y="336" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">13:00 ET</text>
+        <polyline fill="none" stroke="#c34420" stroke-width="2.6" points="66,120 115,215 164,175 262,140 360,96 458,64 556,51"/>
+        <polyline fill="none" stroke="#f1663e" stroke-width="2.3" points="66,193 115,245 164,218 262,188 360,162 458,148 556,141"/>
+        <polyline fill="none" stroke="#22613b" stroke-width="2.2" points="66,238 115,258 164,230 262,212 360,200 458,194 556,190"/>
+        <polyline fill="none" stroke="#716657" stroke-width="2" stroke-dasharray="5,3" points="66,238 115,268 164,244 262,226 360,214 458,208 556,204"/>
+        <polyline fill="none" stroke="#29231d" stroke-width="2" points="66,268 115,274 164,256 262,240 360,236 458,233 556,234"/>
+        <circle cx="556" cy="51" r="3.5" fill="#c34420"/><text x="565" y="55" font-size="12.5" font-weight="700" fill="#c34420">SMH +4.15%</text>
+        <circle cx="556" cy="141" r="3.2" fill="#f1663e"/><text x="565" y="145" font-size="12.5" font-weight="700" fill="#f1663e">QQQ +2.65%</text>
+        <circle cx="556" cy="190" r="3.2" fill="#22613b"/><text x="565" y="191" font-size="12.5" font-weight="700" fill="#22613b">IWM +1.83%</text>
+        <circle cx="556" cy="204" r="3" fill="#716657"/><text x="565" y="210" font-size="12.5" fill="#716657">SPY +1.62%</text>
+        <circle cx="556" cy="234" r="3" fill="#29231d"/><text x="565" y="238" font-size="12.5" font-weight="700" fill="#29231d">道指 +1.18%</text>
+      </svg>
+      <div class="chart-cap">单位：相对 11 月 25 日收盘涨跌幅（%）。数据来源：Google Finance 2026-11-27 黑五半日市（09:30–13:00 ET）盘中 5 分钟级快照。</div>
+    </div>
+  </section>
+
+  <section id="sec-2">
+    <h2>2. 盘中走势复盘与核心归因</h2>
+    <ul>
+      <li><strong>早盘高开回踩（09:30–10:15 ET）：</strong>受周三尾盘企稳及节日期间油价回调提振，三大指数集体跳空高开（SPY 开 $725.86、QQQ 开 $645.72）；开盘 20 分钟内出现短线获利回吐，SPY 下探 $719.61、QQQ 回踩 $636.72，但迅速获买盘承接。</li>
+      <li><strong>中盘梯次拉升（10:15–12:15 ET）：</strong>半导体存储与光通信板块率先发力（MU、MRVL、COHR、SNDK 涨幅迅速扩大至 7%–15%），TSLA 与 AMZN 同步拉抬纳指，VIX 跌破 25。</li>
+      <li><strong>半日尾盘收于最高（12:15–13:00 ET）：</strong>假期最后 45 分钟买盘持续流入，标普 500 最高触及 7,304.10 点，QQQ 站上 $650 关口收于 $650.73，收盘后美债市场于 14:00 ET 提前休市。</li>
+    </ul>
+    <p><strong>核心归因：</strong>今日大涨并非宏观利率转向（10Y 美债反而升 9 bps 至 4.94%），而是<strong>超跌半导体/科技空头回补 + WTI 原油回落缓和通胀恐慌 + 假日低流动性下的买盘放大效应</strong>共同推动。</p>
+  </section>
+
+  <section id="sec-3">
+    <h2>3. 宏观环境（美债、Fed 预期、大宗汇率与经济数据）</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>宏观项目 / 经济数据</th><th class="num">最新水平 / 实际值</th><th class="num">日变化 / 备注</th><th>市场解读</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2Y 美债收益率</strong></td><td class="num">4.69%</td><td class="num neg">+8 bps</td><td>美债于 14:00 ET 提前休市，短端重定价紧缩预期（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>）</td></tr>
+          <tr><td><strong>10Y 美债收益率</strong></td><td class="num">4.94%</td><td class="num neg">+9 bps（+1.82%）</td><td>再度逼近 5.0% 心理关口，股债出现短线脱敏</td></tr>
+          <tr><td><strong>30Y 美债收益率</strong></td><td class="num">5.33%</td><td class="num neg">+9 bps（+1.72%）</td><td>2Y–10Y 利差约 +25 bps，长端利率压力仍在</td></tr>
+          <tr><td><strong>CME FedWatch（12 月 9 日）</strong></td><td class="num">近乎锁定加息 25 bps</td><td class="num">现区间 3.75%–4.00%</td><td>受周三核心 PCE 3.3% 影响，12 月 8–9 日会议加息已成一致预期</td></tr>
+          <tr><td><strong>DXY 美元指数</strong></td><td class="num">104.04</td><td class="num">+0.36%</td><td>EUR/USD 报 1.0939（-0.36%），USD/JPY 报 159.55（+0.26%）；巴西宣布财长人选后 USD/BRL 跌 -3.97%</td></tr>
+          <tr><td><strong>现货黄金（XAU）</strong></td><td class="num">$3,644.05</td><td class="num pos">+2.16%</td><td>反弹逼近 $3,700 关口，下档 $3,500 形成强支撑（<a href="https://tradingeconomics.com/commodity/gold" target="_blank" rel="noopener">Trading Economics</a>、<a href="https://www.forex.com/en-us/news-and-analysis/gold-outlook-can-xau-usd-sustain-its-recent-rebound/" target="_blank" rel="noopener">Forex.com</a>）</td></tr>
+          <tr><td><strong>WTI / Brent 原油</strong></td><td class="num">$83.33 / $95.44</td><td class="num pos">-1.88% / -$1.13</td><td>单日回落缓解通胀焦虑，但受霍尔木兹海峡风险影响仍录得 11 月首个单周上涨（<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">Trading Economics</a>、<a href="https://www.producer.com/market-update/canadian-financial-close-loonie-steady-crude-oil-lower-2/" target="_blank" rel="noopener">Producer</a>）</td></tr>
+          <tr><td><strong>比特币 / 以太坊</strong></td><td class="num">$59,896 / $1,663</td><td class="num">低位整理</td><td>未能随纳指同步大涨，BTC 仍围绕 $60,000 关口拉锯</td></tr>
+          <tr><td><strong>当日重要美国经济数据</strong></td><td class="num">无重磅数据公布</td><td class="num">下周迎非农</td><td>黑五休市期数据真空，市场焦点转向 12 月首周非农就业报告</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sec-4">
+    <h2>4. 板块表现（标普 500 十一个板块）</h2>
+    <div class="chart">
+      <div class="chart-title">11 大板块全线收涨：信息技术（+2.80%）与可选消费（+2.11%）领跑，防御垫底</div>
+      <svg viewBox="0 0 700 440" width="100%" role="img" aria-label="2026-11-27标普500十一个板块涨跌幅">
+        <line x1="150" y1="14" x2="150" y2="404" stroke="#29231d" stroke-width="1.6"/>
+        <line x1="290" y1="14" x2="290" y2="404" stroke="#e0d4bc" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="430" y1="14" x2="430" y2="404" stroke="#e0d4bc" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="570" y1="14" x2="570" y2="404" stroke="#e0d4bc" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="150" y="426" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" font-weight="700" fill="#29231d">0.0%</text>
+        <text x="290" y="426" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+1.0%</text>
+        <text x="430" y="426" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+2.0%</text>
+        <text x="570" y="426" text-anchor="middle" font-family="Consolas,monospace" font-size="12.5" fill="#716657">+3.0%</text>
+        <text x="140" y="38" text-anchor="end" font-size="13.5" font-weight="700" fill="#29231d">信息技术 XLK</text>
+        <rect x="150" y="22" width="392" height="22" rx="4" fill="#22613b"/><text x="550" y="38" font-family="Consolas,monospace" font-size="13.5" font-weight="700" fill="#22613b">+2.80%</text>
+        <text x="140" y="72" text-anchor="end" font-size="13.5" fill="#3d342b">可选消费 XLY</text>
+        <rect x="150" y="56" width="295" height="22" rx="4" fill="#22613b" opacity="0.92"/><text x="453" y="72" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+2.11%</text>
+        <text x="140" y="106" text-anchor="end" font-size="13.5" fill="#3d342b">通信服务 XLC</text>
+        <rect x="150" y="90" width="279" height="22" rx="4" fill="#22613b" opacity="0.88"/><text x="437" y="106" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+1.99%</text>
+        <text x="140" y="140" text-anchor="end" font-size="13.5" fill="#3d342b">材料 XLB</text>
+        <rect x="150" y="124" width="258" height="22" rx="4" fill="#22613b" opacity="0.84"/><text x="416" y="140" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+1.84%</text>
+        <text x="140" y="174" text-anchor="end" font-size="13.5" fill="#3d342b">工业 XLI</text>
+        <rect x="150" y="158" width="224" height="22" rx="4" fill="#22613b" opacity="0.80"/><text x="382" y="174" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+1.60%</text>
+        <text x="140" y="208" text-anchor="end" font-size="13.5" fill="#3d342b">能源 XLE</text>
+        <rect x="150" y="192" width="176" height="22" rx="4" fill="#22613b" opacity="0.74"/><text x="334" y="208" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+1.26%</text>
+        <text x="140" y="242" text-anchor="end" font-size="13.5" fill="#3d342b">金融 XLF</text>
+        <rect x="150" y="226" width="161" height="22" rx="4" fill="#22613b" opacity="0.70"/><text x="319" y="242" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+1.15%</text>
+        <text x="140" y="276" text-anchor="end" font-size="13.5" fill="#3d342b">房地产 XLRE</text>
+        <rect x="150" y="260" width="90" height="22" rx="4" fill="#22613b" opacity="0.60"/><text x="248" y="276" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+0.64%</text>
+        <text x="140" y="310" text-anchor="end" font-size="13.5" fill="#3d342b">必需消费 XLP</text>
+        <rect x="150" y="294" width="57" height="22" rx="4" fill="#22613b" opacity="0.52"/><text x="215" y="310" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+0.41%</text>
+        <text x="140" y="344" text-anchor="end" font-size="13.5" fill="#3d342b">医疗保健 XLV</text>
+        <rect x="150" y="328" width="39" height="22" rx="4" fill="#22613b" opacity="0.46"/><text x="197" y="344" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+0.28%</text>
+        <text x="140" y="378" text-anchor="end" font-size="13.5" fill="#3d342b">公用事业 XLU</text>
+        <rect x="150" y="362" width="39" height="22" rx="4" fill="#22613b" opacity="0.46"/><text x="197" y="378" font-family="Consolas,monospace" font-size="13.5" fill="#22613b">+0.28%</text>
+      </svg>
+      <div class="chart-cap">数据来源：Google Finance 2026-11-27 17:00 ET 收盘。进攻成长（XLK、XLY、XLC）与顺周期（XLB、XLI）全面领跑防御板块（XLU、XLV、XLP）。</div>
+    </div>
+    <p>板块强弱呈现标准的 <strong>Risk-On 风险偏好回升</strong> 特征：周三唯一深跌的信息技术（XLK）跃居榜首（+2.80%），特斯拉与亚马逊推动可选消费（XLY +2.11%）居次；而医疗保健（XLV +0.28%）、公用事业（XLU +0.28%）和必需消费（XLP +0.41%）等防御板块涨幅最小。</p>
+  </section>
+
+  <section id="sec-5">
+    <h2>5. 主题与风格表现</h2>
+    <div class="grid-3">
+      <div class="mini-card"><div class="k">半导体 SMH / SOX</div><div class="v pos">+4.15%</div><p>SMH 收 $440.06（SOX +4.69%），从周三深 V 反转彻底转为主攻，存储与光通信涨幅高达 8%–16%。</p></div>
+      <div class="mini-card"><div class="k">中小盘 IWM / 中盘 400</div><div class="v pos">+1.83%</div><p>IWM 收 $273.79（RUT +1.71%），标普中盘 400 涨 +1.31%、小盘 600 涨 +1.38%，小盘连续跑赢大盘。</p></div>
+      <div class="mini-card"><div class="k">等权标普 RSP</div><div class="v pos">+1.22%</div><p>RSP 收 $218.38，连续创下近期收盘新高，印证行情并非单纯依赖少数权重股拉抬。</p></div>
+    </div>
+    <p>风格上，今日呈现<strong>成长股强反弹 + 周期与中小盘协同扩散</strong>的格局；高 Beta AI 软件（PLTR +6.09%、ANT +10.98%）同样录得显著超额收益，其余细分主题 ETF（IGV、HACK、TAN 等）当日完整收盘明细暂无可靠统一汇总。</p>
+  </section>
+
+  <section id="sec-6">
+    <h2>6. 市场宽度与参与度</h2>
+    <div class="grid-2">
+      <div class="mini-card"><div class="k">标普 500 涨跌家数</div><div class="v pos">406 : 94</div><p>上涨家数占比超 81%（约 4.32:1），较周三（370:128）进一步扩大（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>）。</p></div>
+      <div class="mini-card"><div class="k">恐慌指数 VIX</div><div class="v pos">23.81（-11.16%）</div><p>全天自高点 27.52 单边回落并收于最低，成功下穿 25 关口；全市场 20/50/100/200 日均线参与度终值暂无可靠数据。</p></div>
+    </div>
+    <p><strong>量价结构评估：</strong>受感恩节后半日市影响，大盘整体成交量较常规交易日显著收缩（SPY 成交 968 万股、QQQ 成交 3,550 万股），下周初全天交易恢复后的量能承接尤为关键。</p>
+  </section>
+
+  <section id="sec-7">
+    <h2>7. 技术面分析</h2>
+    <div class="grid-2">
+      <div class="mini-card"><div class="k">SPY（$728.32 · +1.62%）</div><p>放量缩半日阳线突破 $722–$725 压力带，盘后进一步走高至 $731.30。<strong>支撑：</strong>$720 / $716；<strong>压力：</strong>$731 / $735。</p></div>
+      <div class="mini-card"><div class="k">QQQ（$650.73 · +2.65%）</div><p>一举收复 $643 与 $650 双重整数关口，完成短线止跌确认。<strong>支撑：</strong>$643 / $636；<strong>压力：</strong>$655 / $662。</p></div>
+      <div class="mini-card"><div class="k">IWM（$273.79 · +1.83%）</div><p>有效突破 2,720（IWM $272）前压，呈现清晰的多头通道延续。<strong>支撑：</strong>$270 / $268；<strong>压力：</strong>$276 / $280。</p></div>
+      <div class="mini-card"><div class="k">SMH（$440.06 · +4.15%）</div><p>越过 $435 颈线位并收于日内高位附近，但盘后微回踩至 $437.30。<strong>支撑：</strong>$428 / $422；<strong>压力：</strong>$445 / $450。</p></div>
+    </div>
+    <p>技术面确认信号已触发：SPY 站稳 $722 上方且 VIX 收于 25 下方（23.81），短线底部结构基本确立，下周重点观察 $730 与 QQQ $650 突破的有效性（需常规成交量配合）。</p>
+  </section>
+
+  <section id="sec-8">
+    <h2>8. 重点个股新闻与异动（七巨头、AI 硬件、软件与电力）</h2>
+    <p><strong>科技七巨头全线上涨但内部弹性分化：</strong>Tesla（TSLA +5.29% 重回 $400 整数大关）、Amazon（AMZN +3.96%）、Meta（META +3.13%）充当反弹先锋；AAPL（+0.83%）、GOOGL（+0.68%）、MSFT（+0.60%）温和跟涨；而周三受标普信用负面观察冲击的 NVDA 仅微涨 +0.37% 至 $149.85（部分源计 +0.80%），资金更青睐高弹性二线算力与存储链。</p>
+    <ul>
+      <li><strong>AI 硬件 / 存储与光互连爆发：</strong>存储芯片全线飙涨，MU 收 $646.95（<strong>+8.70%</strong>）、SNDK 暴涨 <strong>+15.96%</strong>、STX <strong>+7.90%</strong>；光互连与高速连接芯片领跑全场，COHR <strong>+14.07%</strong>、ALAB <strong>+8.67%</strong>、LITE <strong>+7.98%</strong>；定制芯片与 GPU 阵营 MRVL <strong>+7.34%</strong>、AMD <strong>+4.62%</strong>、AVGO <strong>+3.82%</strong>、DELL <strong>+6.70%</strong>、ANET <strong>+6.55%</strong>（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>）。</li>
+      <li><strong>软件 / AI 应用：</strong>新晋上市的 <strong>Anthropic（ANT）</strong> 大涨 <strong>+10.98%</strong> 报 $91.88，强势重返 $83 IPO 发行价上方；PLTR 收 $172.17（<strong>+6.09%</strong>），ORCL 摆脱百元破位阴霾反弹 <strong>+3.13%</strong> 至 $107.13，CoreWeave（CRWV）涨 +3.71%。</li>
+      <li><strong>AI 电力 / 液冷基础设施：</strong>液冷龙头 VRT 涨 <strong>+3.13%</strong> 至 $178.71（逼近 $180 压力位）；核电龙头 CEG 涨 <strong>+1.20%</strong> 至 $238.10。</li>
+    </ul>
+  </section>
+
+  <section id="sec-9">
+    <h2>9. 财报日历与财报解读</h2>
+    <ul>
+      <li><strong>当日财报动态：</strong>黑五半日市无重磅科技或权重公司发布财报，市场仍在消化周三盘前 ADI 营收创纪录但指引保守所反映的高预期门槛。</li>
+      <li><strong>下周重磅科技财报日历（11 月 30 日–12 月 4 日）：</strong>软件与半导体将迎来集中检验，核心焦点包括 <strong>OKTA（12 月 1 日周二盘后，一致预期营收 $8.155 亿 / EPS $0.93，Whisper 预期 $1.03）</strong>，以及 <strong>MRVL（Marvell）、CRM（Salesforce）、CRWD（CrowdStrike）、SNOW（Snowflake）</strong>（<a href="https://alpha.earningswhispers.com/" target="_blank" rel="noopener">Earnings Whispers</a>）。</li>
+    </ul>
+  </section>
+
+  <section id="sec-10">
+    <h2>10. 机构观点与资金流</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>机构 / 市场线索</th><th>核心观点与动向</th><th>涉及资产</th><th>市场影响</th></tr></thead>
+        <tbody>
+          <tr><td><strong>周度趋势复盘（Reuters / CappNotes）</strong></td><td>标普 500 单周 +5.6% 创 2025 年 4 月以来最佳，道指创 2022 年 10 月以来最大周涨幅</td><td>SPY / DJI</td><td>证实 11 月中旬急跌后逢低配置资金大举进场（<a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank" rel="noopener">CappNotes</a>）</td></tr>
+          <tr><td><strong>大宗商品与地缘跟踪</strong></td><td>WTI 原油回调 -1.88% 至 $83.33，但霍尔木兹海峡风险仍使油价录得本月首个周涨</td><td>WTI / Brent / XLE</td><td>短期缓解股市估值压制，但中期能源通胀尾巴未消（<a href="https://www.globalbankingandfinance.com/brent-trades-near-months-high-mideast-conflict-threatens/" target="_blank" rel="noopener">GBF</a>）</td></tr>
+          <tr><td><strong>新兴市场汇率联动</strong></td><td>巴西总统卢拉任命 Bradesco 董事长 Trabuco 出任财长，USD/BRL 暴跌 -3.97%</td><td>外汇 / 新兴市场</td><td>温和提振全球风险情绪与风险资产配置偏好</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sec-11">
+    <h2>11. 板块轮动判断</h2>
+    <p><strong>当前定性：</strong><span class="pill pill-up">科技硬件反攻</span> <span class="pill pill-up">普涨扩散</span> <span class="pill pill-mid">利率钝化</span></p>
+    <p>市场从周三“单边高切低（非科技涨、芯片跌）”切换为周五<strong>“全市场风险偏好回升（科技存储/光通信领涨 + 周期与中小盘稳步跟进）”</strong>。但需注意：NVDA 仍显著跑输存储（MU +8.7%）和光互连（COHR +14.1%），说明资金在 AI 内部也正从拥挤龙头向估值修复与细分景气环节切换。</p>
+  </section>
+
+  <section id="sec-12">
+    <h2>12. 我的重点关注股观察</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>标的</th><th class="num">收盘价</th><th class="num">涨跌</th><th class="num">日内低点 / 高点</th><th>支撑 / 压力与催化</th><th>判断</th></tr></thead>
+        <tbody>
+          <tr><td><strong>NVDA</strong></td><td class="num">$149.85</td><td class="num pos">+0.37%</td><td class="num">$149.15 / $151.94</td><td>显著滞后 SOX（+4.69%），仍受标普信用观察压制；支撑 $141，压力 $156</td><td><span class="pill pill-warn">需要观察</span></td></tr>
+          <tr><td><strong>TSLA</strong></td><td class="num">$400.00</td><td class="num pos">+5.29%</td><td class="num">$384.88 / $400.40</td><td>七巨头领涨先锋，重返 $400 整数关；支撑 $385，压力 $412</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>AMZN</strong></td><td class="num">$254.12</td><td class="num pos">+3.96%</td><td class="num">$247.30 / $254.44</td><td>强力收复周三全部跌幅并站上 $253；支撑 $247，压力 $260</td><td><span class="pill pill-up">低位修复</span></td></tr>
+          <tr><td><strong>META</strong></td><td class="num">$628.96</td><td class="num pos">+3.13%</td><td class="num">$613.50 / $629.50</td><td>两日连续放量上攻突破 $620；支撑 $610，压力 $645</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>AAPL</strong></td><td class="num">$358.54</td><td class="num pos">+0.83%</td><td class="num">$355.00 / $359.30</td><td>紧贴 52 周高点 $360.83 蓄势；支撑 $350，压力 $361</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>MSFT</strong></td><td class="num">$492.85</td><td class="num pos">+0.60%</td><td class="num">$489.00 / $494.50</td><td>温和修复，尚未挑战 $500；支撑 $485，压力 $500</td><td><span class="pill pill-mid">回踩支撑</span></td></tr>
+          <tr><td><strong>GOOGL</strong></td><td class="num">$274.96</td><td class="num pos">+0.68%</td><td class="num">$271.20 / $275.80</td><td>止跌企稳但弹性偏弱；支撑 $268，压力 $280</td><td><span class="pill pill-warn">需要观察</span></td></tr>
+          <tr><td><strong>AVGO</strong></td><td class="num">$312.34</td><td class="num pos">+3.82%</td><td class="num">$301.80 / $312.90</td><td>成功突破 $310 阻力；支撑 $300，压力 $322</td><td><span class="pill pill-up">低位修复</span></td></tr>
+          <tr><td><strong>AMD</strong></td><td class="num">$424.54</td><td class="num pos">+4.62%</td><td class="num">$407.50 / $425.10</td><td>连续两日走强突破 $420 压力；支撑 $406，压力 $435</td><td><span class="pill pill-up">低位修复</span></td></tr>
+          <tr><td><strong>MU</strong></td><td class="num">$646.95</td><td class="num pos">+8.70%</td><td class="num">$602.00 / $648.00</td><td>存储板块反攻旗手；支撑 $605，压力 $665</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>MRVL</strong></td><td class="num">$140.54</td><td class="num pos">+7.34%</td><td class="num">$132.10 / $141.00</td><td>下周财报前资金抢跑；支撑 $132，压力 $146</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>PLTR</strong></td><td class="num">$172.17</td><td class="num pos">+6.09%</td><td class="num">$164.00 / $172.80</td><td>突破 $170 关口创近期新高；支撑 $164，压力 $178</td><td><span class="pill pill-up">继续强势</span></td></tr>
+          <tr><td><strong>ORCL</strong></td><td class="num">$107.13</td><td class="num pos">+3.13%</td><td class="num">$103.50 / $107.60</td><td>百元关口上方弱修复，仍受限于 $110；支撑 $100，压力 $110</td><td><span class="pill pill-warn">需要观察</span></td></tr>
+          <tr><td><strong>VRT</strong></td><td class="num">$178.71</td><td class="num pos">+3.13%</td><td class="num">$173.80 / $179.20</td><td>逼近 $180 关键压力位；支撑 $170，压力 $182</td><td><span class="pill pill-up">低位修复</span></td></tr>
+          <tr><td><strong>CEG</strong></td><td class="num">$238.10</td><td class="num pos">+1.20%</td><td class="num">$235.10 / $239.80</td><td>小幅跟涨但未脱离底部箱体；支撑 $229，压力 $248</td><td><span class="pill pill-warn">需要观察</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sec-13">
+    <h2>13. 下一交易日观察清单（下周一常规盘回归）</h2>
+    <p><strong>日程提醒：</strong>下周一（11 月 30 日）美股恢复常规全天交易（09:30–16:00 ET），周中将迎来 <strong>12 月非农前瞻与 OKTA / CRM / CRWD / SNOW / MRVL 财报周</strong>，同时 12 月 8–9 日 FOMC 会议临近。</p>
+    <ul>
+      <li><strong>量能与突破确认：</strong>周一全天成交量能否放大承接黑五半日市涨幅；SPY 能否站稳 $728–$730，QQQ 能否守住 $650 关口。</li>
+      <li><strong>美债 5.0% 防线：</strong>10 年期美债收益率已升至 4.94%，若周一冲破 5.0% 可能压制高估值科技股继续上攻。</li>
+      <li><strong>重点观察个股：</strong>NVDA（能否补涨突破 $152–$156 摆脱滞涨）、MRVL &amp; OKTA（下周初财报前资金博弈）、MU / COHR（存储光通信持续性）、TSLA（$400 站稳情况）。</li>
+    </ul>
+  </section>
+
+  <section id="sec-14">
+    <h2>14. 风险提示与风险等级</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>风险维度</th><th>当前状态</th><th>风险等级</th></tr></thead>
+        <tbody>
+          <tr><td><strong>宏观利率</strong></td><td>10Y 美债收益率重返 4.94% 逼近 5.0% 高压线，12 月加息几乎完全定价</td><td><span class="pill pill-dn">高</span></td></tr>
+          <tr><td><strong>地缘与能源</strong></td><td>油价单日回落但霍尔木兹海峡风险仍在，布油仍处 $95 高位</td><td><span class="pill pill-warn">中高</span></td></tr>
+          <tr><td><strong>半日市量能失真</strong></td><td>黑五成交清淡（QQQ 仅 3,550 万股），周一常规盘面临真实抛压检验</td><td><span class="pill pill-warn">中高</span></td></tr>
+          <tr><td><strong>财报考验</strong></td><td>下周 MRVL / OKTA / CRM / CRWD / SNOW 集中披露，高估值容错率低</td><td><span class="pill pill-warn">中高</span></td></tr>
+          <tr><td><strong>AI 龙头分化</strong></td><td>NVDA 滞涨（+0.37%），信用观察阴影尚未消散</td><td><span class="pill pill-mid">中</span></td></tr>
+          <tr><td><strong>市场宽度与情绪</strong></td><td>标普 406:94 普涨、11 板块全红、VIX 跌破 24，内部结构健康</td><td><span class="pill pill-up">低</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sec-15">
+    <h2>15. 最终结论与明日最值得关注的 5 个信号</h2>
+    <div class="callout">当前市场阶段：短线止跌确认 · 全市场共振反弹（进入下周量能与财报检验期）</div>
+    <p><strong>今日市场结论：</strong>黑五半日市交出了一份“指数大涨 + 板块全红 + VIX 跌破 24”的强势周线收官答卷，标普 500 单周大涨 +5.6% 显著修复了 11 月中旬以来的悲观情绪。不过，由于假期成交清淡且 10 年期美债收益率已升至 4.94%，下周一常规交易日才是真正检验这波反弹成色的试金石。</p>
+    <p><strong>中性操作倾向（非投资建议）：</strong>连续两日大涨后<strong>不宜在周一早盘盲目追高</strong>单日涨幅过大的存储/光通信品种，可重点观察回踩支撑后的承接力；对 NVDA 保持耐心等待放量摆脱 $152 压制，同时留意下周二盘后 OKTA 等软件与芯片财报对板块情绪的指引。</p>
+    <ol>
+      <li><strong>10 年期美债收益率 4.94%–5.00% 关口</strong>：若周一突破 5.0%，需防科技股短线震荡回吐；</li>
+      <li><strong>QQQ $650 与 SPY $728 的常规量能确认</strong>：观察周一成交量能否恢复并守住黑五缺口；</li>
+      <li><strong>NVDA 能否补涨脱离滞涨区</strong>：检验标普信用负面观察的利空是否已被市场彻底消化；</li>
+      <li><strong>下周初 OKTA / MRVL 财报预期博弈</strong>：观察软件与二线 AI 芯片的业绩兑现度；</li>
+      <li><strong>VIX 能否继续下行至 22 下方</strong>：确认市场波动率中枢彻底脱离高压区。</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>
